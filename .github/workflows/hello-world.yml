@@ -1,0 +1,14 @@
+#nom du workflow
+name: Hello world
+
+#evenement du declencheur
+on: [push]
+
+#definition des taches (jobs) a executer
+jobs:
+  say_hello: # nom du job
+    runs-on: ubuntu-latest # machine virtuelle (runner) 
+
+    steps: # suite d'etape a executer 
+      - name: PrintHello #nom de l'etape
+        run: echo "Bonjour depuis Github Actions !" # commande a executer 
